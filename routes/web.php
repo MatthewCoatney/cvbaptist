@@ -135,6 +135,10 @@ Route::get('sermon-searchlist', function () {
     return Response::json($searchlist);
 });
 
+//Testing Tipue Search
+//Route::get('tipue','PagesController@tipue');
+
+
 //Working Mailtrap
 //Route::get('send', 'EmailController@send');
 //END Mailtrap

@@ -64,10 +64,12 @@ public function received()
     return view('ministries');
   }
 
+public function tipue(){ return view('tipue'); }
 
   public function sermons()
   {
     $searchlist = Helper::getSermonSearchlist();
+    //dd($searchlist);
     return view('sermons')->with('searchlist',$searchlist);;
   }
 /*
