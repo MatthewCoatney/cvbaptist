@@ -65,7 +65,7 @@ Route::get('sermons', 'PagesController@sermons')->name('sermons');
 
 Route::get('services', 'PagesController@services');
 
-Route::get('services', 'PagesController@services');
+//Route::get('services', 'PagesController@services');
 
 Route::get('products', 'PagesController@products');
 
@@ -121,23 +121,7 @@ Route::get('calendar-events', function () {
 // Get a JSON formatted playlist of the 7
 // most recent sermons for HOWLER
 Route::get('sermon-playlist', function () {
-    // Returning array
-    $playlist = array();
-
-    $songs = Helper::getSermonPlaylist();
-
-    foreach ($songs as $s) {
-        $song = array(
-                    "title" => $s->title,
-                    "file" => $s->file,
-                    "howl" => null,
-            );
-
-        // Merge the playlist array into the return array
-        array_push($playlist, $song);
-    }
-
-    return Response::json($playlist);
+    return Response::json(Helper::getSermonPlaylist());
 });
 
 // Get a JSON formatted playlist of the 7

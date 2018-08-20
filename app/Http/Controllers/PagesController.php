@@ -9,7 +9,7 @@ use Helper;
 class PagesController extends Controller
 {
 
-<<<<<<< HEAD
+
 public function clearcache(){
     //$exitCodeB = Artisan::call('config:cache');
     //$exitCodeA = Artisan::call('cache:clear');
@@ -20,7 +20,7 @@ public function clearcache(){
     //$ /opt/php71/bin/php artisan cache:clear
     //$ /opt/php71/bin/php artisan view:clear
 
-    
+
     $process = new Process('/opt/php71/lib artisan config:cache');
     $process->run();
 
@@ -44,8 +44,7 @@ public function clearcache(){
   return 'Clear';
 }
 
-=======
->>>>>>> parent of 9867a33... Workaround for Shared Host running CLI commands
+
 public function received()
 {
   return view('emails.received');
@@ -182,12 +181,12 @@ public function received()
     {
       return view('audiotest');
     }
-
+/*
     public function crud()
     {
       return view('crud');
     }
-
+*/
     public function forge()
     {
       return view('forge');

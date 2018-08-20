@@ -44,11 +44,14 @@ class Helper
 
     // Fetch latest 7 sermon records
     $songs = DB::table('sermons')
-              ->latest('date')
+              ->latest('created_at')
               ->limit(7)
-              ->get(); //->toSql();
+              //->toSql(); // debug sql by uncommenting
+              ->get(); //select * from `sermons` order by `date` desc limit 7
 
-
+              //dd($songs); // debug sql by uncommenting
+          
+              try{
                   foreach ($songs as $s) {
                       $song = array(
                                   "title" => $s->title,
@@ -59,7 +62,9 @@ class Helper
                       // Merge the playlist array into the return array
                       array_push($playlist, $song);
                   }
-
+             }catch(\Exception $e){
+                //dd($e);
+             }
     return json_encode($playlist); //JSON encoding w/o header info
   }
 
