@@ -27,7 +27,7 @@
       events: {
         url: '/calendar-events',
         error: function() {
-		
+
           $('#script-warning').show();
         }
       },
@@ -35,6 +35,9 @@
         $('#loading').toggle(bool);
       }
     });
+
+    // Moves the calendar to today's date
+    $('#calendar').fullCalendar('today');
 
   });
 

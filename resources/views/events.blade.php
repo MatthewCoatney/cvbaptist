@@ -20,12 +20,13 @@
   background-color: white;
   height:100px;
   border-left: 4px solid #b23850;/*pink #ff69b4;*/
+  overflow: hidden;
 }
 
 .events-b{
   background-color: white;
   height:100px;
-
+  overflow: hidden;
 }
 
 
