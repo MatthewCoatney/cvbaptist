@@ -1,5 +1,8 @@
 
 @extends ('layouts.master')
+@section('issermons')
+class="current"
+@stop
 
 @section('title')
   Catheys Valley Baptist | Sermons

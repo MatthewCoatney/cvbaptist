@@ -52,6 +52,7 @@
           <li><a @yield('isministries') href="ministries">Ministries</a></li>
           <li><a @yield('isevents') href="events">Events</a></li>
           <li><a @yield('isservices') href="services">Services</a></li>
+            <li><a @yield('issermons') href="sermons">Sermons</a></li>
         </ul>
       </div>
     </div>
